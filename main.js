@@ -57,24 +57,24 @@ const imagens = [
   
 ]
 
-function criarLegenda (scrLegenda) {
+function criarLegenda (srcLegenda) {
     const galeria = document.getElementById('legenda')
     
-    scrLegenda.scr = scrLegenda.nome
-    legenda.appendChild(legenda)
+    legenda.src = srcLegenda.nome
 }
 
 function carregarLegenda () {
-    const legenda = document.getElementById('legenda')
+    const galeria = document.getElementById('legenda')
 
     imagens.forEach (criarLegenda)
 }
 
-function criarImagens (scrImagem) {
+function criarImagens (srcImagem) {
     const galeria = document.getElementById('galeria')
         const imagem = document.createElement('img') 
 
-        imagem.src = scrImagem.url
+        imagem.src = srcImagem.url
+       
         galeria.appendChild(imagem)
 }
 
@@ -82,6 +82,8 @@ function carregarImagens(){
     const galeria = document.getElementById('galeria')
 
     imagens.forEach (criarImagens)
+    imagens.forEach (criarLegenda)
 }
 
 carregarImagens()
+carregarLegenda()
